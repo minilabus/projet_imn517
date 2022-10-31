@@ -1,1 +1,2 @@
 # Python
+`pip install -e .`

@@ -1,3 +1,7 @@
+# Python
+*.egg-info/
+*.pyc
+
 # C++
 *.cmake
 Makefile
