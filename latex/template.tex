@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage[x11names]{xcolor}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+
+\usepackage[explicit]{titlesec}
+\usepackage{setspace}
+
+\usepackage{geometry}
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=10mm}
+
+\usepackage{hyperref}
+
+
+\definecolor{cute_green}{RGB}{4, 104, 33}
+\definecolor{light_green}{RGB}{4, 130, 33}
+
+\titleformat{\section}
+{\sffamily\Large\bfseries\color{cyan}}
+{}
+{0em}
+{%
+  \begin{tikzpicture}
+    \node[name=r1, rectangle, fill=cute_green, anchor=north west, font=\color{white},
+    inner sep=3pt, minimum width=70mm, minimum height=10mm,
+    xshift=3mm, align=center, text width=70mm,
+    ] {#1};
+    \node[name=c, rectangle, fill=light_green, font=\color{white}, anchor=north west,
+    minimum width=10mm,
+    ] {\thesection};
+    \draw[cute_green, line width=5pt] ($(c.north east)+(0,-.5\pgflinewidth)$)
+    -- ({(\textwidth)},{-.5\pgflinewidth});
+  \end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=10cm]{fig/uds_logo.jpg}
+\end{figure}
+\noindent
+{\large {\em Rapport Hebdomadaire} \hfill Équipe \#1 - H2023\\}
+
+\noindent
+{\color{cute_green} \rule{\linewidth}{0.5mm} }
+
+\noindent
+{\large À: Pr. Francois Rheault}
+\noindent
+
+\section{Description du projet:}
+
+
+\subsection{Équipe}
+\begin{itemize}
+    \item Membre \#1
+    \item Membre \#2
+\end{itemize}
+
+
+\section{Premier objectif}
+{\large {\em Titre de l'objectif} \hfill 31 octobre 2022\\}
+\subsection{Résumé de l'objectif:}
+Résumé dans vos propres mots l'objectif en cours et placer le dans le contexte du projet. Les livrables demandés, les attentes du Professeur et celles de l'équipe, les liens avec l'objectif précédent et/ou le suivant, l'importance du concept théorique \cite{koehler2022ungrading} dans le cadre du cours, l'importance technique/appliqué du concept dans le cadre du cours, etc.
+
+$$H=-\sum_{i=1}^{M} P_i\,log_2\,P_i$$
+
+\subsection{Contributions individuelles:}
+\subsubsection*{Membre \#1:} Description de la contribution algorithmique, organisation de la tâche, vérification des résultats, écriture du rapport, etc.
+
+Tableau évaluation personelle de la tâche. Évaluer la quantité, la qualité et la difficulté de l'effort que vous avez mis dans cet objectif. Selon les contributions décrites plus haut, votre niveau de connaissance actuel et les tâches des autres membres de l'équipe, pouvez-vous quantifier votre apport à l'objectif
+\begin{center}
+\begin{tabular}{ |cc|cc|cc| } 
+ \hline
+ Quantité & X/5 & Qualité & Y/5 & Difficulté & Z/5 \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{Membre \#2:}
+
+\subsection{Limitations et défis:}
+Est-ce que des décisions des semaines antérieurs ont rendu votre vie plus ou moins difficile, est-ce que des erreurs ont été découvertes, est-ce que votre approche technique ou collaborative est encore adaptée?
+
+\bibliographystyle{unsrt}
+\bibliography{ref}
+\end{document}

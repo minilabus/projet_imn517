@@ -1,1 +1,2 @@
 # Latex
+`pdflatex template.tex`
