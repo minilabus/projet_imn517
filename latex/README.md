@@ -1,2 +1,6 @@
 # Latex
-`pdflatex template.tex`
+```
+bibtex template.tex
+latex template.tex
+pdflatex template.tex
+```
